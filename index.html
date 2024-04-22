@@ -1,0 +1,88 @@
+<!--Xuan Huy Pham / 000899551-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 4 SVG and JavaSCript</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Assignment 4: SVG and JavaScript</h1>
+            <h2>Xuan Huy Pham / 000899551</h2>
+        </header>
+        <!--Game container-->
+        <div id="game-container">
+            <div id="player"></div>
+            <div id="obstacle"></div>
+            <div id="score"> Score: 0 </div>
+            <div id="lives">
+                <img id="heartIcon" src="additional/live.png" alt="Heart" width="40px">  <span id="livesCount">5</span>
+            </div>
+            <div id="left-pic"></div>
+            <p id = "author">@Xuan-Huy-Pham-Mohawk-College</p>
+
+
+            <!-- Modal Popup. This is the menu where user selects player/obstacle appeareance -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <form id="option-form">
+                        <!--choose player appearance-->
+                        <div id="choose-player">
+                            <h4>Select Player</h4>
+                            <label>
+                                <input type="radio" name="player-option" id="player-default-option" value="player-default" checked>
+                                Default
+                            </label>
+                            <label>
+                                <input type="radio" name="player-option" id="picA-option" value="picA">
+                                Bart Simpsons
+                            </label>
+                            <label>
+                                <input type="radio" name="player-option" id="picB-option" value="picB">
+                                Mario
+                            </label>
+                        </div>
+                        <!--choose obstacle appearance-->
+                        <div id="choose-obstacle">
+                            <h4>Select Obstacle</h4>
+                            <label>
+                                <input type="radio" name="obstacle-option" id="default-option" value="default" checked>
+                                Default
+                            </label>
+                            <label>
+                                <input type="radio" name="obstacle-option" id="imageA-option" value="imageA">
+                                Rocket
+                            </label>
+                            <label>
+                                <input type="radio" name="obstacle-option" id="imageB-option" value="imageB">
+                                Goomba
+                            </label>
+                        </div>
+                        <br>
+                    </form>
+                    <!--start button to start game-->
+                    <button id="start-button">Start</button>
+                </div>
+            </div>
+        </div>
+
+        <!--message box where indicates game over and the score achieved-->
+        <div id="game-over-popup">
+            <div id="game-over-message">Game Over!</div>
+            <div id="final-score"></div>
+            <button id="restart-button">Restart</button>
+        </div>
+        <!--audio added whenever function jump is performed-->
+        <audio id="jumpSound" src="additional/playersound.wav"></audio>
+        <p id="instruction">How to play:<br>Select your Player/Obstacles and click "START" to play</p>
+        <footer>
+            <p>© 2024 XUAN HUY PHAM ~ 000899551</p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
